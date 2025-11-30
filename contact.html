@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما - شرکت نوآوران فناوری</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- لودر -->
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- هدر -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">نوآوران فناوری</a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">خانه</a></li>
+                <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                <li><a href="services.html" class="nav-link">خدمات</a></li>
+                <li><a href="products.html" class="nav-link">محصولات</a></li>
+                <li><a href="contact.html" class="nav-link active">تماس با ما</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+<!-- صفحه تماس با ما -->
+<main class="main-content">
+    <!-- هیرو تماس -->
+    <section class="hero contact-hero">
+        <div class="hero-content">
+            <h1>در تماس باشید</h1>
+            <p>آماده پاسخگویی به سوالات و پیشنهادات شما هستیم</p>
+        </div>
+    </section>
+
+    <!-- اطلاعات تماس -->
+    <section class="section contact-info-section">
+        <div class="contact-info-grid">
+            <div class="contact-info-card scroll-fade">
+                <div class="contact-icon">📞</div>
+                <h3>تلفن تماس</h3>
+                <p>۰۲۱-۱۲۳۴۵۶۷۸</p>
+                <p>۰۹۱۲-۱۲۳-۴۵۶۷</p>
+                <span class="contact-time">پاسخگویی: شنبه تا چهارشنبه ۸:۰۰ تا ۱۷:۰۰</span>
+            </div>
+
+            <div class="contact-info-card scroll-fade">
+                <div class="contact-icon">📧</div>
+                <h3>ایمیل</h3>
+                <p>info@company.com</p>
+                <p>support@company.com</p>
+                <span class="contact-time">پاسخگویی: ۲۴ ساعته</span>
+            </div>
+
+            <div class="contact-info-card scroll-fade">
+                <div class="contact-icon">📍</div>
+                <h3>آدرس</h3>
+                <p>تهران، خیابان ولیعصر</p>
+                <p>پلاک ۱۲۳۴، طبقه ۵</p>
+                <span class="contact-time">مراجعه: با هماهنگی قبلی</span>
+            </div>
+
+            <div class="contact-info-card scroll-fade">
+                <div class="contact-icon">💬</div>
+                <h3>چت آنلاین</h3>
+                <p>پشتیبانی فنی</p>
+                <p>مشاوره رایگان</p>
+                <span class="contact-time">آنلاین: هم اکنون</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- فرم تماس اصلی -->
+    <section class="section contact-form-section">
+        <div class="contact-form-container">
+            <div class="form-header">
+                <h2 class="section-title">فرم تماس با ما</h2>
+                <p>پیام خود را برای ما ارسال کنید، در اسرع وقت پاسخ خواهیم داد</p>
+            </div>
+
+            <form id="mainContactForm" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactName" class="form-label">نام و نام خانوادگی *</label>
+                        <input type="text" id="contactName" class="form-control" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactCompany" class="form-label">نام شرکت</label>
+                        <input type="text" id="contactCompany" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactEmail" class="form-label">ایمیل *</label>
+                        <input type="email" id="contactEmail" class="form-control" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactPhone" class="form-label">تلفن تماس *</label>
+                        <input type="tel" id="contactPhone" class="form-control" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactDepartment" class="form-label">دپارتمان مربوطه *</label>
+                    <select id="contactDepartment" class="form-control" required>
+                        <option value="">انتخاب کنید</option>
+                        <option value="sales">فروش و بازاریابی</option>
+                        <option value="support">پشتیبانی فنی</option>
+                        <option value="technical">تیم فنی</option>
+                        <option value="management">مدیریت</option>
+                        <option value="other">سایر</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactSubject" class="form-label">موضوع *</label>
+                    <input type="text" id="contactSubject" class="form-control" required>
+                    <span class="error-message" id="subjectError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactMessage" class="form-label">پیام شما *</label>
+                    <textarea id="contactMessage" class="form-control" rows="6" required placeholder="پیام خود را با جزئیات بنویسید..."></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label class="file-upload-label">
+                        <input type="file" id="contactAttachment" class="file-input" multiple>
+                        <span class="file-upload-text">📎 افزودن فایل ضمیمه (اختیاری)</span>
+                    </label>
+                    <div id="fileList" class="file-list"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="contactNewsletter" checked>
+                        <span class="checkmark"></span>
+                        مایل به دریافت خبرنامه و اطلاعیه‌ها هستم
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-large" id="submitBtn">
+                    <span class="btn-text">ارسال پیام</span>
+                    <div class="btn-loader" id="btnLoader"></div>
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- نقشه و آدرس -->
+    <section class="section map-section">
+        <div class="map-container">
+            <h2 class="section-title">موقعیت ما روی نقشه</h2>
+            <div class="map-wrapper">
+                <!-- نقشه گوگل -->
+                <div class="map-placeholder" id="map">
+                    <div class="map-overlay">
+                        <h3>📍 دفتر مرکزی شرکت</h3>
+                        <p>تهران، خیابان ولیعصر، پلاک ۱۲۳۴</p>
+                        <button class="btn" onclick="openGoogleMaps()">مشاهده در Google Maps</button>
+                    </div>
+                </div>
+                
+                <div class="location-info">
+                    <h3>دسترسی‌ها</h3>
+                    <div class="transport-options">
+                        <div class="transport-option">
+                            <span class="transport-icon">🚇</span>
+                            <div>
+                                <strong>مترو</strong>
+                                <p>ایستگاه ولیعصر - خط ۱</p>
+                            </div>
+                        </div>
+                        <div class="transport-option">
+                            <span class="transport-icon">🚌</span>
+                            <div>
+                                <strong>اتوبوس</strong>
+                                <p>ایستگاه ولیعصر - خطوط BRT</p>
+                            </div>
+                        </div>
+                        <div class="transport-option">
+                            <span class="transport-icon">🅿️</span>
+                            <div>
+                                <strong>پارکینگ</strong>
+                                <p>پارکینگ عمومی در مجاورت ساختمان</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- سوالات متداول -->
+    <section class="section faq-section">
+        <h2 class="section-title">سوالات متداول</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item scroll-fade">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>ساعات کاری شرکت چه زمانی است؟</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>ساعات کاری شرکت شنبه تا چهارشنبه از ۸:۰۰ تا ۱۷:۰۰ و پنجشنبه‌ها از ۸:۰۰ تا ۱۴:۰۰ می‌باشد. پشتیبانی فنی به صورت ۲۴/۷ از طریق تیکت و تلفن در دسترس است.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item scroll-fade">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>چگونه می‌توانم از خدمات شرکت استفاده کنم؟</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>می‌توانید از طریق فرم تماس، تلفن یا ایمیل با ما در ارتباط باشید. پس از بررسی نیازهای شما، پیشنهاد و قیمت‌گذاری ارائه خواهد شد.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item scroll-fade">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>آیا امکان بازدید از دفتر شرکت وجود دارد؟</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>بله، با هماهنگی قبلی از طریق تلفن یا ایمیل، می‌توانید از دفتر شرکت بازدید کنید و با تیم ما ملاقات داشته باشید.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item scroll-fade">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>مدت زمان انجام پروژه‌ها چقدر است؟</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>مدت زمان پروژه بستگی به پیچیدگی و حجم کار دارد. معمولاً پروژه‌های وب سایت ۲-۴ هفته، اپلیکیشن موبایل ۴-۸ هفته و پروژه‌های بزرگ ۲-۶ ماه زمان نیاز دارند.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تیم پشتیبانی -->
+    <section class="section support-team-section">
+        <h2 class="section-title">تیم پشتیبانی ما</h2>
+        
+        <div class="support-team-grid">
+            <div class="support-member scroll-fade">
+                <div class="member-avatar">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="پشتیبانی فنی">
+                </div>
+                <h3>علیرضا محمدی</h3>
+                <p class="member-role">مدیر پشتیبانی فنی</p>
+                <p class="member-contact">📞 ۰۹۱۲-۱۱۱-۲۲۲۲</p>
+                <p class="member-email">📧 ali@company.com</p>
+            </div>
+            
+            <div class="support-member scroll-fade">
+                <div class="member-avatar">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="فروش">
+                </div>
+                <h3>فاطمه کریمی</h3>
+                <p class="member-role">مدیر فروش</p>
+                <p class="member-contact">📞 ۰۹۱۲-۳۳۳-۴۴۴۴</p>
+                <p class="member-email">📧 fateme@company.com</p>
+            </div>
+            
+            <div class="support-member scroll-fade">
+                <div class="member-avatar">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="مشاوره">
+                </div>
+                <h3>سارا احمدی</h3>
+                <p class="member-role">مشاور فنی</p>
+                <p class="member-contact">📞 ۰۹۱۲-۵۵۵-۶۶۶۶</p>
+                <p class="member-email">📧 sara@company.com</p>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- چت آنلاین -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-header" onclick="toggleChat()">
+        <span>💬 چت آنلاین</span>
+        <span class="chat-status">آنلاین</span>
+    </div>
+    
+    <div class="chat-body" id="chatBody">
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>سلام! 👋 به پشتیبانی آنلاین شرکت نوآوران فناوری خوش آمدید. چگونه می‌توانم کمک کنم؟</p>
+                    <span class="message-time">هم اکنون</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="پیام خود را بنویسید...">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+</div>
+
+<!-- مودال موفقیت -->
+<div id="successModal" class="modal success-modal">
+    <div class="modal-content">
+        <div class="success-icon">✅</div>
+        <h2>پیام شما با موفقیت ارسال شد!</h2>
+        <p>با تشکر از تماس شما. همکاران ما در اسرع وقت با شما تماس خواهند گرفت.</p>
+        <button class="btn" onclick="closeSuccessModal()">باشه</button>
+    </div>
+</div>
+
+<!-- فوتور -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>درباره ما</h3>
+            <p>شرکت نوآوران فناوری با هدف ارائه راه‌حل‌های نوآورانه در حوزه فناوری اطلاعات تأسیس شده است.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+                <a href="#" class="social-link">🐦</a>
+                <a href="#" class="social-link">💼</a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>لینک‌های سریع</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="services.html">خدمات</a></li>
+                <li><a href="products.html">محصولات</a></li>
+                <li><a href="contact.html">تماس با ما</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>تماس با ما</h3>
+            <div class="contact-info">
+                <p>📞 021-12345678</p>
+                <p>📧 info@company.com</p>
+                <p>📍 تهران، خیابان ولیعصر</p>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>خبرنامه</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="ایمیل خود را وارد کنید" class="form-control" required>
+                <button type="submit" class="btn">عضویت</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2024 شرکت نوآوران فناوری. تمام حقوق محفوظ است.</p>
+    </div>
+</footer>
+
+<!-- دکمه بازگشت به بالا -->
+<a href="#" class="back-to-top" id="backToTop">↑</a>
+<!-- JavaScript این صفحه -->
+<script>
+    // لودر
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader');
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 1000);
+    });
+
+    // منوی همبرگری
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // اسکرول نرم
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // دکمه بازگشت به بالا
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+<script>
+    // انیمیشن اسکرول
+    class ScrollAnimations {
+        constructor() {
+            this.elements = document.querySelectorAll('.scroll-fade');
+            this.init();
+        }
+        
+        init() {
+            this.checkScroll();
+            window.addEventListener('scroll', () => this.checkScroll());
+        }
+        
+        checkScroll() {
+            const triggerBottom = window.innerHeight * 0.8;
+            
+            this.elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerBottom) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+    }
+
+    // مدیریت آپلود فایل
+    class FileUpload {
+        constructor() {
+            this.fileInput = document.getElementById('contactAttachment');
+            this.fileList = document.getElementById('fileList');
+            this.maxFiles = 5;
+            this.maxSize = 10 * 1024 * 1024; // 10MB
+            this.init();
+        }
+        
+        init() {
+            this.fileInput.addEventListener('change', (e) => this.handleFileSelect(e));
+        }
+        
+        handleFileSelect(e) {
+            const files = Array.from(e.target.files);
+            
+            // بررسی تعداد فایل‌ها
+            if (files.length > this.maxFiles) {
+                alert(`حداکثر ${this.maxFiles} فایل می‌توانید آپلود کنید`);
+                this.fileInput.value = '';
+                return;
+            }
+            
+            // بررسی حجم فایل‌ها
+            for (const file of files) {
+                if (file.size > this.maxSize) {
+                    alert(`حجم فایل "${file.name}" بیش از ۱۰ مگابایت است`);
+                    this.fileInput.value = '';
+                    return;
+                }
+            }
+            
+            this.displayFiles(files);
+        }
+        
+        displayFiles(files) {
+            this.fileList.innerHTML = '';
+            
+            files.forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `
+                    <span class="file-name">${file.name}</span>
+                    <span class="file-size">(${this.formatFileSize(file.size)})</span>
+                    <button class="file-remove" onclick="fileUpload.removeFile(${index})">×</button>
+                `;
+                this.fileList.appendChild(fileItem);
+            });
+        }
+        
+        removeFile(index) {
+            const dt = new DataTransfer();
+            const files = Array.from(this.fileInput.files);
+            
+            files.splice(index, 1);
+            files.forEach(file => dt.items.add(file));
+            
+            this.fileInput.files = dt.files;
+            this.displayFiles(Array.from(this.fileInput.files));
+        }
+        
+        formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        getFiles() {
+            return Array.from(this.fileInput.files);
+        }
+    }
+
+    // ایجاد نمونه آپلود فایل
+    const fileUpload = new FileUpload();
+</script>
+<script>
+    // سیستم فرم تماس
+    class ContactForm {
+        constructor() {
+            this.form = document.getElementById('mainContactForm');
+            this.submitBtn = document.getElementById('submitBtn');
+            this.btnLoader = document.getElementById('btnLoader');
+            this.btnText = document.querySelector('.btn-text');
+            this.init();
+        }
+        
+        init() {
+            this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+            this.setupRealTimeValidation();
+        }
+        
+        setupRealTimeValidation() {
+            const fields = this.form.querySelectorAll('input, select, textarea');
+            fields.forEach(field => {
+                field.addEventListener('blur', () => this.validateField(field));
+                field.addEventListener('input', () => this.clearError(field));
+            });
+        }
+        
+        validateField(field) {
+            const value = field.value.trim();
+            const errorElement = document.getElementById(field.id + 'Error');
+            
+            // پاک کردن خطای قبلی
+            this.clearError(field);
+            
+            // اعتبارسنجی فیلدهای الزامی
+            if (field.hasAttribute('required') && !value) {
+                this.showError(field, 'این فیلد الزامی است');
+                return false;
+            }
+            
+            // اعتبارسنجی ایمیل
+            if (field.type === 'email' && value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    this.showError(field, 'ایمیل معتبر نیست');
+                    return false;
+                }
+            }
+            
+            // اعتبارسنجی تلفن
+            if (field.type === 'tel' && value) {
+                const phoneRegex = /^09[0-9]{9}$/;
+                if (!phoneRegex.test(value)) {
+                    this.showError(field, 'شماره تلفن معتبر نیست');
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+        
+        showError(field, message) {
+            field.classList.add('error');
+            const errorElement = document.getElementById(field.id + 'Error');
+            if (errorElement) {
+                errorElement.textContent = message;
+            }
+        }
+        
+        clearError(field) {
+            field.classList.remove('error');
+            const errorElement = document.getElementById(field.id + 'Error');
+            if (errorElement) {
+                errorElement.textContent = '';
+            }
+        }
+        
+        async handleSubmit(e) {
+            e.preventDefault();
+            
+            // اعتبارسنجی تمام فیلدها
+            const fields = this.form.querySelectorAll('input, select, textarea');
+            let isValid = true;
+            
+            fields.forEach(field => {
+                if (!this.validateField(field)) {
+                    isValid = false;
+                }
+            });
+            
+            if (!isValid) {
+                this.showNotification('لطفا تمام فیلدهای الزامی را به درستی پر کنید', 'error');
+                return;
+            }
+            
+            // نمایش لودر
+            this.setLoading(true);
+            
+            try {
+                await this.submitForm();
+                this.showSuccessModal();
+                this.form.reset();
+                fileUpload.fileList.innerHTML = '';
+            } catch (error) {
+                this.showNotification('خطا در ارسال پیام! لطفا دوباره تلاش کنید.', 'error');
+            } finally {
+                this.setLoading(false);
+            }
+        }
+        
+        setLoading(loading) {
+            if (loading) {
+                this.submitBtn.disabled = true;
+                this.btnText.textContent = 'در حال ارسال...';
+                this.btnLoader.style.display = 'block';
+            } else {
+                this.submitBtn.disabled = false;
+                this.btnText.textContent = 'ارسال پیام';
+                this.btnLoader.style.display = 'none';
+            }
+        }
+        
+        async submitForm() {
+            const formData = {
+                name: document.getElementById('contactName').value,
+                company: document.getElementById('contactCompany').value,
+                email: document.getElementById('contactEmail').value,
+                phone: document.getElementById('contactPhone').value,
+                department: document.getElementById('contactDepartment').value,
+                subject: document.getElementById('contactSubject').value,
+                message: document.getElementById('contactMessage').value,
+                newsletter: document.getElementById('contactNewsletter').checked,
+                files: fileUpload.getFiles(),
+                timestamp: new Date().toISOString(),
+                ip: await this.getUserIP()
+            };
+            
+            // شبیه‌سازی تاخیر شبکه
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            // در حالت واقعی اینجا داده‌ها به سرور ارسال می‌شوند
+            console.log('Contact form submitted:', formData);
+            
+            return true;
+        }
+        
+        async getUserIP() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                return data.ip;
+            } catch (error) {
+                return 'unknown';
+            }
+        }
+        
+        showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 5000);
+        }
+    }
+</script>
+<script>
+    // سیستم چت آنلاین
+    class ChatWidget {
+        constructor() {
+            this.chatBody = document.getElementById('chatBody');
+            this.chatMessages = document.getElementById('chatMessages');
+            this.chatInput = document.getElementById('chatInput');
+            this.isOpen = false;
+            this.init();
+        }
+        
+        init() {
+            this.setupEventListeners();
+        }
+        
+        setupEventListeners() {
+            this.chatInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    this.sendMessage();
+                }
+            });
+        }
+        
+        toggleChat() {
+            this.isOpen = !this.isOpen;
+            this.chatBody.style.display = this.isOpen ? 'block' : 'none';
+        }
+        
+        sendMessage() {
+            const message = this.chatInput.value.trim();
+            if (!message) return;
+            
+            // افزودن پیام کاربر
+            this.addMessage(message, 'user');
+            this.chatInput.value = '';
+            
+            // شبیه‌سازی پاسخ ربات
+            setTimeout(() => {
+                this.addMessage(this.generateResponse(message), 'bot');
+            }, 1000);
+        }
+        
+        addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            
+            const now = new Date();
+            const time = now.toLocaleTimeString('fa-IR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+            
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    <p>${text}</p>
+                    <span class="message-time">${time}</span>
+                </div>
+            `;
+            
+            this.chatMessages.appendChild(messageDiv);
+            this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+        }
+        
+        generateResponse(userMessage) {
+            const responses = {
+                'hello': 'سلام! چطور می‌تونم کمکتون کنم؟',
+                'price': 'برای دریافت قیمت‌ها لطفا با بخش فروش تماس بگیرید یا از فرم تماس استفاده کنید.',
+                'support': 'پشتیبانی فنی ما ۲۴/۷ در دسترس است. می‌تونید مشکلتون رو توضیح بدید؟',
+                'time': 'ساعات کاری: شنبه تا چهارشنبه ۸-۱۷، پنجشنبه ۸-۱۴',
+                'address': 'آدرس: تهران، خیابان ولیعصر، پلاک ۱۲۳۴',
+                'default': 'متشکرم از پیام شما. برای پاسخ دقیق‌تر لطفا با شماره ۰۲۱-۱۲۳۴۵۶۷۸ تماس بگیرید.'
+            };
+            
+            const lowerMessage = userMessage.toLowerCase();
+            
+            if (lowerMessage.includes('سلام') || lowerMessage.includes('hello')) {
+                return responses.hello;
+            } else if (lowerMessage.includes('قیمت') || lowerMessage.includes('price')) {
+                return responses.price;
+            } else if (lowerMessage.includes('پشتیبانی') || lowerMessage.includes('support')) {
+                return responses.support;
+            } else if (lowerMessage.includes('ساعت') || lowerMessage.includes('time')) {
+                return responses.time;
+            } else if (lowerMessage.includes('آدرس') || lowerMessage.includes('address')) {
+                return responses.address;
+            } else {
+                return responses.default;
+            }
+        }
+    }
+
+    // ایجاد نمونه چت
+    const chatWidget = new ChatWidget();
+</script>
+<script>
+    // توابع سراسری
+    function toggleChat() {
+        chatWidget.toggleChat();
+    }
+
+    function sendMessage() {
+        chatWidget.sendMessage();
+    }
+
+    function toggleFAQ(element) {
+        const faqItem = element.parentElement;
+        const answer = faqItem.querySelector('.faq-answer');
+        const icon = element.querySelector('.faq-icon');
+        
+        // بستن سایر آیتم‌ها
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== faqItem) {
+                item.classList.remove('active');
+                item.querySelector('.faq-answer').style.display = 'none';
+                item.querySelector('.faq-icon').textContent = '+';
+            }
+        });
+        
+        // باز/بستن آیتم جاری
+        faqItem.classList.toggle('active');
+        if (faqItem.classList.contains('active')) {
+            answer.style.display = 'block';
+            icon.textContent = '−';
+        } else {
+            answer.style.display = 'none';
+            icon.textContent = '+';
+        }
+    }
+
+    function openGoogleMaps() {
+        const address = encodeURIComponent('تهران، خیابان ولیعصر، پلاک ۱۲۳۴');
+        window.open(`https://www.google.com/maps/search/?api=1&query=${address}`, '_blank');
+    }
+
+    function showSuccessModal() {
+        document.getElementById('successModal').style.display = 'block';
+    }
+
+    function closeSuccessModal() {
+        document.getElementById('successModal').style.display = 'none';
+    }
+
+    // راه‌اندازی نهایی
+    document.addEventListener('DOMContentLoaded', function() {
+        new ScrollAnimations();
+        new ContactForm();
+        
+        // بستن مودال با کلیک خارج
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSuccessModal();
+            }
+        });
+        
+        // بستن مودال با کلید ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSuccessModal();
+            }
+        });
+
+        // مدیریت فرم خبرنامه
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                
+                // شبیه‌سازی ارسال
+                setTimeout(() => {
+                    alert('با تشکر از عضویت شما در خبرنامه!');
+                    this.reset();
+                }, 500);
+            });
+        }
+
+        console.log('Contact page loaded successfully!');
+    });
+</script>
+    <script>
+        // Utility functions
+        const contactUtils = {
+            // کپی اطلاعات تماس
+            copyToClipboard: async (text) => {
+                try {
+                    await navigator.clipboard.writeText(text);
+                    return true;
+                } catch (err) {
+                    // Fallback برای مرورگرهای قدیمی
+                    const textArea = document.createElement('textarea');
+                    textArea.value = text;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    return true;
+                }
+            },
+            
+            // تماس تلفنی
+            makePhoneCall: (number) => {
+                window.location.href = `tel:${number}`;
+            },
+            
+            // ارسال ایمیل
+            sendEmail: (email) => {
+                window.location.href = `mailto:${email}`;
+            },
+            
+            // اشتراک گذاری
+            shareContact: () => {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'شرکت نوآوران فناوری',
+                        text: 'تماس با شرکت نوآوران فناوری',
+                        url: window.location.href
+                    });
+                } else {
+                    alert('امکان اشتراک‌گذاری در این مرورگر وجود ندارد');
+                }
+            },
+            
+            // ذخیره اطلاعات تماس
+            saveToContacts: () => {
+                const vCard = `
+BEGIN:VCARD
+VERSION:3.0
+FN:شرکت نوآوران فناوری
+TEL:021-12345678
+EMAIL:info@company.com
+ADR:;;تهران، خیابان ولیعصر، پلاک ۱۲۳۴;;;
+URL:https://company.com
+END:VCARD
+                `.trim();
+                
+                const blob = new Blob([vCard], { type: 'text/vcard' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'contact.vcf';
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+        };
+
+        // رویدادهای تماس سریع
+        document.addEventListener('DOMContentLoaded', function() {
+            // اضافه کردن event listener به کارت‌های تماس
+            document.querySelectorAll('.contact-info-card').forEach(card => {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', function() {
+                    const type = this.querySelector('h3').textContent;
+                    const value = this.querySelector('p').textContent;
+                    
+                    switch(type) {
+                        case 'تلفن تماس':
+                            contactUtils.makePhoneCall(value);
+                            break;
+                        case 'ایمیل':
+                            contactUtils.sendEmail(value);
+                            break;
+                        case 'آدرس':
+                            openGoogleMaps();
+                            break;
+                        case 'چت آنلاین':
+                            toggleChat();
+                            break;
+                    }
+                });
+            });
+            
+            // افزودن قابلیت کپی
+            document.querySelectorAll('.contact-info-card p').forEach(p => {
+                p.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    contactUtils.copyToClipboard(this.textContent);
+                    
+                    // نمایش تأیید کپی
+                    const originalText = this.textContent;
+                    this.textContent = 'کپی شد!';
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                    }, 2000);
+                });
+            });
+
+            // سیستم موقعیت‌یابی
+            if (navigator.geolocation) {
+                const locationBtn = document.createElement('button');
+                locationBtn.className = 'btn btn-secondary';
+                locationBtn.textContent = '📍 پیدا کردن مسیر از موقعیت فعلی';
+                locationBtn.onclick = getCurrentLocation;
+                
+                document.querySelector('.map-overlay').appendChild(locationBtn);
+            }
+        });
+
+        function getCurrentLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const userLat = position.coords.latitude;
+                        const userLng = position.coords.longitude;
+                        const companyLat = 35.6892; // مختصات فرضی شرکت
+                        const companyLng = 51.3890;
+                        
+                        const mapsUrl = `https://www.google.com/maps/dir/${userLat},${userLng}/${companyLat},${companyLng}`;
+                        window.open(mapsUrl, '_blank');
+                    },
+                    (error) => {
+                        alert('دسترسی به موقعیت مکانی ممکن نیست');
+                    }
+                );
+            } else {
+                alert('مرورگر شما از موقعیت‌یابی پشتیبانی نمی‌کند');
+            }
+        }
+
+        // سیستم آفلاین/آنلاین
+        window.addEventListener('online', function() {
+            document.querySelector('.chat-status').textContent = 'آنلاین';
+            document.querySelector('.chat-status').style.color = '#4CAF50';
+        });
+
+        window.addEventListener('offline', function() {
+            document.querySelector('.chat-status').textContent = 'آفلاین';
+            document.querySelector('.chat-status').style.color = '#f44336';
+        });
+    </script>
+</body>
+</html>

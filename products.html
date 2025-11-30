@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محصولات - شرکت نوآوران فناوری</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- لودر -->
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- هدر -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">نوآوران فناوری</a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">خانه</a></li>
+                <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                <li><a href="services.html" class="nav-link">خدمات</a></li>
+                <li><a href="products.html" class="nav-link active">محصولات</a></li>
+                <li><a href="contact.html" class="nav-link">تماس با ما</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+<!-- صفحه محصولات -->
+<main class="main-content">
+    <!-- هیرو محصولات -->
+    <section class="hero products-hero">
+        <div class="hero-content">
+            <h1>محصولات نرم‌افزاری ما</h1>
+            <p>راه‌حل‌های آماده برای کسب‌وکارهای مختلف</p>
+        </div>
+    </section>
+
+    <!-- فیلتر محصولات -->
+    <section class="section">
+        <div class="products-filter">
+            <h2 class="section-title">دسته‌بندی محصولات</h2>
+            <div class="category-filters">
+                <button class="category-filter active" data-category="all">همه محصولات</button>
+                <button class="category-filter" data-category="crm">سیستم CRM</button>
+                <button class="category-filter" data-category="cms">سیستم مدیریت محتوا</button>
+                <button class="category-filter" data-category="accounting">نرم‌افزار مالی</button>
+                <button class="category-filter" data-category="hr">سیستم منابع انسانی</button>
+                <button class="category-filter" data-category="ecommerce">فروشگاه ساز</button>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="productSearch" placeholder="جستجوی محصولات..." class="search-input">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+
+        <!-- لیست محصولات -->
+        <div class="products-container">
+            <!-- محصول CRM -->
+            <div class="product-card scroll-fade" data-category="crm">
+                <div class="product-badge">پرفروش</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="سیستم CRM">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">سیستم CRM پیشرفته</h3>
+                    <p class="product-description">مدیریت ارتباط با مشتریان با امکانات کامل پیگیری و گزارش‌گیری</p>
+                    
+                    <div class="product-features">
+                        <span class="feature-tag">مدیریت مشتریان</span>
+                        <span class="feature-tag">پیگیری فروش</span>
+                        <span class="feature-tag">گزارش‌گیری</span>
+                        <span class="feature-tag">پشتیبانی</span>
+                    </div>
+                    
+                    <div class="product-price">
+                        <span class="current-price">۲۹,۰۰۰,۰۰۰ تومان</span>
+                        <span class="original-price">۳۵,۰۰۰,۰۰۰ تومان</span>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn" onclick="openProductModal('crm-advanced')">مشاهده جزئیات</button>
+                        <button class="btn btn-secondary" onclick="addToCart('crm-advanced')">🛒 افزودن به سبد</button>
+                    </div>
+                </div>
+            </div>
+<!-- محصول CMS -->
+<div class="product-card scroll-fade" data-category="cms">
+    <div class="product-badge">جدید</div>
+    <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="سیستم مدیریت محتوا">
+    </div>
+    <div class="product-info">
+        <h3 class="product-title">سیستم مدیریت محتوا Pro</h3>
+        <p class="product-description">CMS قدرتمند با امکانات پیشرفته برای وب سایت‌های بزرگ</p>
+        
+        <div class="product-features">
+            <span class="feature-tag">ویرایشگر پیشرفته</span>
+            <span class="feature-tag">سئو داخلی</span>
+            <span class="feature-tag">مدیریت کاربران</span>
+            <span class="feature-tag">پشتیبان‌گیری</span>
+        </div>
+        
+        <div class="product-price">
+            <span class="current-price">۱۵,۰۰۰,۰۰۰ تومان</span>
+            <span class="original-price">۱۸,۰۰۰,۰۰۰ تومان</span>
+        </div>
+        
+        <div class="product-actions">
+            <button class="btn" onclick="openProductModal('cms-pro')">مشاهده جزئیات</button>
+            <button class="btn btn-secondary" onclick="addToCart('cms-pro')">🛒 افزودن به سبد</button>
+        </div>
+    </div>
+</div>
+
+<!-- محصول حسابداری -->
+<div class="product-card scroll-fade" data-category="accounting">
+    <div class="product-badge">محبوب</div>
+    <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="نرم‌افزار حسابداری">
+    </div>
+    <div class="product-info">
+        <h3 class="product-title">نرم‌افزار حسابداری شرکتی</h3>
+        <p class="product-description">سیستم جامع مالی و حسابداری برای شرکت‌های کوچک و متوسط</p>
+        
+        <div class="product-features">
+            <span class="feature-tag">صورت‌های مالی</span>
+            <span class="feature-tag">مدیریت حقوق</span>
+            <span class="feature-tag">انبارداری</span>
+            <span class="feature-tag">گزارش‌گیری</span>
+        </div>
+        
+        <div class="product-price">
+            <span class="current-price">۲۲,۰۰۰,۰۰۰ تومان</span>
+            <span class="original-price">۲۵,۰۰۰,۰۰۰ تومان</span>
+        </div>
+        
+        <div class="product-actions">
+            <button class="btn" onclick="openProductModal('accounting-corporate')">مشاهده جزئیات</button>
+            <button class="btn btn-secondary" onclick="addToCart('accounting-corporate')">🛒 افزودن به سبد</button>
+        </div>
+    </div>
+</div>
+        <!-- محصول منابع انسانی -->
+        <div class="product-card scroll-fade" data-category="hr">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1551836026-d5c0889dd6d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="سیستم منابع انسانی">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">سیستم مدیریت منابع انسانی</h3>
+                <p class="product-description">مدیریت کامل پرسنل، حضور و غیاب، حقوق و مزایا</p>
+                
+                <div class="product-features">
+                    <span class="feature-tag">مدیریت پرسنل</span>
+                    <span class="feature-tag">حضور و غیاب</span>
+                    <span class="feature-tag">محاسبه حقوق</span>
+                    <span class="feature-tag">ارزیابی عملکرد</span>
+                </div>
+                
+                <div class="product-price">
+                    <span class="current-price">۱۸,۰۰۰,۰۰۰ تومان</span>
+                    <span class="original-price">۲۱,۰۰۰,۰۰۰ تومان</span>
+                </div>
+                
+                <div class="product-actions">
+                    <button class="btn" onclick="openProductModal('hr-management')">مشاهده جزئیات</button>
+                    <button class="btn btn-secondary" onclick="addToCart('hr-management')">🛒 افزودن به سبد</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- محصول فروشگاه ساز -->
+        <div class="product-card scroll-fade" data-category="ecommerce">
+            <div class="product-badge">اقتصادی</div>
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="فروشگاه ساز">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">فروشگاه ساز آنلاین</h3>
+                <p class="product-description">پلتفرم کامل برای راه‌اندازی فروشگاه اینترنتی در کمترین زمان</p>
+                
+                <div class="product-features">
+                    <span class="feature-tag">درگاه پرداخت</span>
+                    <span class="feature-tag">مدیریت محصولات</span>
+                    <span class="feature-tag">سیستم تخفیف</span>
+                    <span class="feature-tag">پنل مدیریت</span>
+                </div>
+                
+                <div class="product-price">
+                    <span class="current-price">۱۲,۰۰۰,۰۰۰ تومان</span>
+                    <span class="original-price">۱۵,۰۰۰,۰۰۰ تومان</span>
+                </div>
+                
+                <div class="product-actions">
+                    <button class="btn" onclick="openProductModal('ecommerce-builder')">مشاهده جزئیات</button>
+                    <button class="btn btn-secondary" onclick="addToCart('ecommerce-builder')">🛒 افزودن به سبد</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- محصول CRM پایه -->
+        <div class="product-card scroll-fade" data-category="crm">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="CRM پایه">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">سیستم CRM پایه</h3>
+                <p class="product-description">راه‌حل ساده و مؤثر برای مدیریت ارتباط با مشتریان کسب‌وکارهای کوچک</p>
+                
+                <div class="product-features">
+                    <span class="feature-tag">مدیریت مخاطبین</span>
+                    <span class="feature-tag">یادآوری</span>
+                    <span class="feature-tag">گزارش ساده</span>
+                    <span class="feature-tag">پشتیبانی ایمیل</span>
+                </div>
+                
+                <div class="product-price">
+                    <span class="current-price">۸,۰۰۰,۰۰۰ تومان</span>
+                    <span class="original-price">۱۰,۰۰۰,۰۰۰ تومان</span>
+                </div>
+                
+                <div class="product-actions">
+                    <button class="btn" onclick="openProductModal('crm-basic')">مشاهده جزئیات</button>
+                    <button class="btn btn-secondary" onclick="addToCart('crm-basic')">🛒 افزودن به سبد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- سبد خرید -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>🛒 سبد خرید شما</h3>
+            <button class="cart-close" onclick="closeCart()">×</button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <!-- آیتم‌های سبد خرید اینجا نمایش داده می‌شوند -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>جمع کل:</span>
+                <span id="cartTotal">۰ تومان</span>
+            </div>
+            <button class="btn btn-large" onclick="checkout()">تکمیل خرید</button>
+        </div>
+    </div>
+
+    <!-- دمو محصولات -->
+    <section class="section demo-section">
+        <h2 class="section-title">نسخه دمو محصولات</h2>
+        
+        <div class="demo-container">
+            <div class="demo-card scroll-fade">
+                <div class="demo-icon">🎬</div>
+                <h3>تماشای دمو</h3>
+                <p>فیلم‌های آموزشی و دموی کامل از تمام محصولات</p>
+                <button class="btn" onclick="openDemoModal()">مشاهده دمو</button>
+            </div>
+            
+            <div class="demo-card scroll-fade">
+                <div class="demo-icon">📥</div>
+                <h3>دانلود نسخه آزمایشی</h3>
+                <p>نسخه ۳۰ روزه رایگان محصولات برای تست</p>
+                <button class="btn" onclick="downloadTrial()">دانلود Trial</button>
+            </div>
+            
+            <div class="demo-card scroll-fade">
+                <div class="demo-icon">👨‍💼</div>
+                <h3>درخواست دموی خصوصی</h3>
+                <p>جلسه آنلاین اختصاصی با متخصصان ما</p>
+                <button class="btn" onclick="requestPrivateDemo()">درخواست دمو</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- مقایسه محصولات -->
+    <section class="section comparison-section">
+        <h2 class="section-title">مقایسه محصولات</h2>
+        
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ویژگی</th>
+                        <th>CRM پایه</th>
+                        <th>CRM پیشرفته</th>
+                        <th>سیستم مالی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>مدیریت مشتریان</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>❌</td>
+                    </tr>
+                    <tr>
+                        <td>گزارش‌گیری پیشرفته</td>
+                        <td>❌</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td>پشتیبانی تلفنی</td>
+                        <td>❌</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td>قیمت</td>
+                        <td>۸ میلیون</td>
+                        <td>۲۹ میلیون</td>
+                        <td>۲۲ میلیون</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<!-- مودال محصول -->
+<div id="productModal" class="modal">
+    <div class="modal-content product-modal">
+        <span class="modal-close" onclick="closeProductModal()">&times;</span>
+        <div id="productModalContent">
+            <!-- محتوای مودال محصول -->
+        </div>
+    </div>
+</div>
+
+<!-- مودال دمو -->
+<div id="demoModal" class="modal">
+    <div class="modal-content demo-modal">
+        <span class="modal-close" onclick="closeDemoModal()">&times;</span>
+        <h2>دموی محصولات</h2>
+        <div class="demo-videos">
+            <div class="demo-video">
+                <h3>سیستم CRM پیشرفته</h3>
+                <div class="video-placeholder">
+                    <p>🎬 اینجا ویدیوی دمو نمایش داده می‌شود</p>
+                    <button class="btn" onclick="playVideo('crm-demo')">پخش ویدیو</button>
+                </div>
+            </div>
+            <div class="demo-video">
+                <h3>سیستم مدیریت محتوا</h3>
+                <div class="video-placeholder">
+                    <p>🎬 اینجا ویدیوی دمو نمایش داده می‌شود</p>
+                    <button class="btn" onclick="playVideo('cms-demo')">پخش ویدیو</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- فوتور -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>درباره ما</h3>
+            <p>شرکت نوآوران فناوری با هدف ارائه راه‌حل‌های نوآورانه در حوزه فناوری اطلاعات تأسیس شده است.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+                <a href="#" class="social-link">🐦</a>
+                <a href="#" class="social-link">💼</a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>لینک‌های سریع</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="services.html">خدمات</a></li>
+                <li><a href="products.html">محصولات</a></li>
+                <li><a href="contact.html">تماس با ما</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>تماس با ما</h3>
+            <div class="contact-info">
+                <p>📞 021-12345678</p>
+                <p>📧 info@company.com</p>
+                <p>📍 تهران، خیابان ولیعصر</p>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>خبرنامه</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="ایمیل خود را وارد کنید" class="form-control" required>
+                <button type="submit" class="btn">عضویت</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2024 شرکت نوآوران فناوری. تمام حقوق محفوظ است.</p>
+    </div>
+</footer>
+
+<!-- دکمه بازگشت به بالا -->
+<a href="#" class="back-to-top" id="backToTop">↑</a>
+
+<!-- آیکون سبد خرید -->
+<div class="cart-icon" onclick="toggleCart()">
+    🛒
+    <span class="cart-count" id="cartCount">0</span>
+</div>
+<!-- JavaScript این صفحه -->
+<script>
+    // لودر
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader');
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 1000);
+    });
+
+    // منوی همبرگری
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // اسکرول نرم
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // دکمه بازگشت به بالا
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+<script>
+    // انیمیشن اسکرول
+    class ScrollAnimations {
+        constructor() {
+            this.elements = document.querySelectorAll('.scroll-fade');
+            this.init();
+        }
+        
+        init() {
+            this.checkScroll();
+            window.addEventListener('scroll', () => this.checkScroll());
+        }
+        
+        checkScroll() {
+            const triggerBottom = window.innerHeight * 0.8;
+            
+            this.elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerBottom) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+    }
+
+    // سیستم فیلتر محصولات
+    class ProductsFilter {
+        constructor() {
+            this.filterButtons = document.querySelectorAll('.category-filter');
+            this.productCards = document.querySelectorAll('.product-card');
+            this.searchInput = document.getElementById('productSearch');
+            this.init();
+        }
+        
+        init() {
+            this.filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => this.filterProducts(btn));
+            });
+            
+            this.searchInput.addEventListener('input', () => this.searchProducts());
+        }
+        
+        filterProducts(clickedBtn) {
+            this.filterButtons.forEach(btn => btn.classList.remove('active'));
+            clickedBtn.classList.add('active');
+            
+            const category = clickedBtn.getAttribute('data-category');
+            
+            this.productCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 100);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+        
+        searchProducts() {
+            const searchTerm = this.searchInput.value.toLowerCase();
+            
+            this.productCards.forEach(card => {
+                const title = card.querySelector('.product-title').textContent.toLowerCase();
+                const description = card.querySelector('.product-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 100);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+    }
+
+    // راه‌اندازی انیمیشن‌ها و فیلتر
+    document.addEventListener('DOMContentLoaded', function() {
+        new ScrollAnimations();
+        new ProductsFilter();
+    });
+</script>
+<script>
+    // سیستم سبد خرید
+    class ShoppingCart {
+        constructor() {
+            this.cart = JSON.parse(localStorage.getItem('cart')) || [];
+            this.init();
+        }
+        
+        init() {
+            this.updateCartUI();
+        }
+        
+        addToCart(productId) {
+            const product = this.getProductDetails(productId);
+            if (!product) return;
+            
+            const existingItem = this.cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                this.cart.push({
+                    id: productId,
+                    name: product.name,
+                    price: product.price,
+                    quantity: 1
+                });
+            }
+            
+            this.saveCart();
+            this.updateCartUI();
+            this.showAddToCartNotification(product.name);
+        }
+        
+        removeFromCart(productId) {
+            this.cart = this.cart.filter(item => item.id !== productId);
+            this.saveCart();
+            this.updateCartUI();
+        }
+        
+        updateQuantity(productId, quantity) {
+            const item = this.cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity = quantity;
+                if (item.quantity <= 0) {
+                    this.removeFromCart(productId);
+                } else {
+                    this.saveCart();
+                    this.updateCartUI();
+                }
+            }
+        }
+        
+        getTotal() {
+            return this.cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+        }
+        
+        saveCart() {
+            localStorage.setItem('cart', JSON.stringify(this.cart));
+        }
+        
+        updateCartUI() {
+            const cartCount = document.getElementById('cartCount');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            // آپدیت تعداد آیتم‌ها
+            cartCount.textContent = this.cart.reduce((total, item) => total + item.quantity, 0);
+            
+            // آپدیت لیست آیتم‌ها
+            cartItems.innerHTML = this.cart.map(item => `
+                <div class="cart-item">
+                    <div class="item-info">
+                        <h4>${item.name}</h4>
+                        <p>${this.formatPrice(item.price)}</p>
+                    </div>
+                    <div class="item-controls">
+                        <button onclick="cart.updateQuantity('${item.id}', ${item.quantity - 1})">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="cart.updateQuantity('${item.id}', ${item.quantity + 1})">+</button>
+                        <button class="remove-btn" onclick="cart.removeFromCart('${item.id}')">×</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            // آپدیت جمع کل
+            cartTotal.textContent = this.formatPrice(this.getTotal());
+        }
+        
+        formatPrice(price) {
+            return new Intl.NumberFormat('fa-IR').format(price) + ' تومان';
+        }
+        
+        showAddToCartNotification(productName) {
+            const notification = document.createElement('div');
+            notification.className = 'cart-notification';
+            notification.innerHTML = `
+                <p>✅ ${productName} به سبد خرید اضافه شد</p>
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        getProductDetails(productId) {
+            const products = {
+                'crm-advanced': { name: 'سیستم CRM پیشرفته', price: 29000000 },
+                'crm-basic': { name: 'سیستم CRM پایه', price: 8000000 },
+                'cms-pro': { name: 'سیستم مدیریت محتوا Pro', price: 15000000 },
+                'accounting-corporate': { name: 'نرم‌افزار حسابداری شرکتی', price: 22000000 },
+                'hr-management': { name: 'سیستم مدیریت منابع انسانی', price: 18000000 },
+                'ecommerce-builder': { name: 'فروشگاه ساز آنلاین', price: 12000000 }
+            };
+            
+            return products[productId];
+        }
+    }
+
+    // ایجاد نمونه سبد خرید
+    const cart = new ShoppingCart();
+</script>
+    <script>
+        // توابع سراسری
+        function toggleCart() {
+            const cartSidebar = document.getElementById('cartSidebar');
+            cartSidebar.classList.toggle('active');
+        }
+
+        function closeCart() {
+            document.getElementById('cartSidebar').classList.remove('active');
+        }
+
+        function addToCart(productId) {
+            cart.addToCart(productId);
+            toggleCart(); // نمایش سبد خرید
+        }
+
+        function checkout() {
+            if (cart.cart.length === 0) {
+                alert('سبد خرید شما خالی است!');
+                return;
+            }
+            
+            alert('در حال انتقال به صفحه پرداخت...');
+            // در حالت واقعی به صفحه پرداخت منتقل می‌شود
+        }
+
+        // مودال محصولات
+        function openProductModal(productId) {
+            const product = cart.getProductDetails(productId);
+            if (!product) return;
+            
+            const modalContent = document.getElementById('productModalContent');
+            modalContent.innerHTML = `
+                <h2>${product.name}</h2>
+                <div class="product-modal-content">
+                    <div class="product-modal-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="${product.name}">
+                    </div>
+                    <div class="product-modal-details">
+                        <h3>جزئیات محصول</h3>
+                        <p>این محصول با آخرین تکنولوژی‌ها توسعه یافته و دارای گارانتی ۱۸ ماهه می‌باشد.</p>
+                        
+                        <div class="product-specs">
+                            <h4>مشخصات فنی:</h4>
+                            <ul>
+                                <li>پشتیبانی از زبان فارسی</li>
+                                <li>رابط کاربری مدرن</li>
+                                <li>امنیت بالا</li>
+                                <li>پشتیبانی ۲۴/۷</li>
+                                <li>آپدیت رایگان ۲ سال</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-price-large">
+                            ${cart.formatPrice(product.price)}
+                        </div>
+                        
+                        <div class="product-modal-actions">
+                            <button class="btn btn-large" onclick="addToCart('${productId}'); closeProductModal();">افزودن به سبد خرید</button>
+                            <button class="btn btn-secondary" onclick="closeProductModal()">بستن</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('productModal').style.display = 'block';
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').style.display = 'none';
+        }
+
+        // مودال دمو
+        function openDemoModal() {
+            document.getElementById('demoModal').style.display = 'block';
+        }
+
+        function closeDemoModal() {
+            document.getElementById('demoModal').style.display = 'none';
+        }
+
+        function playVideo(videoId) {
+            alert(`پخش ویدیوی دمو: ${videoId}`);
+            // در حالت واقعی ویدیو پخش می‌شود
+        }
+
+        function downloadTrial() {
+            alert('نسخه آزمایشی در حال دانلود...');
+            // در حالت واقعی فایل دانلود می‌شود
+        }
+
+        function requestPrivateDemo() {
+            alert('درخواست دموی خصوصی ثبت شد. همکاران ما به زودی با شما تماس خواهند گرفت.');
+        }
+
+        // راه‌اندازی نهایی
+        document.addEventListener('DOMContentLoaded', function() {
+            // بستن مودال‌ها با کلیک خارج
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.style.display = 'none';
+                    }
+                });
+            });
+            
+            // بستن مودال‌ها با کلید ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    document.querySelectorAll('.modal').forEach(modal => {
+                        modal.style.display = 'none';
+                    });
+                    closeCart();
+                }
+            });
+
+            console.log('Products page loaded successfully!');
+        });
+
+        // Utility functions
+        const productUtils = {
+            formatPrice: (price) => {
+                return new Intl.NumberFormat('fa-IR').format(price) + ' تومان';
+            },
+            
+            calculateDiscount: (original, current) => {
+                const discount = ((original - current) / original) * 100;
+                return Math.round(discount) + '%';
+            },
+            
+            getProductRating: (productId) => {
+                const ratings = {
+                    'crm-advanced': 4.8,
+                    'crm-basic': 4.2,
+                    'cms-pro': 4.6,
+                    'accounting-corporate': 4.7,
+                    'hr-management': 4.4,
+                    'ecommerce-builder': 4.5
+                };
+                return ratings[productId] || 4.0;
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات - شرکت نوآوران فناوری</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- لودر -->
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- هدر -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">نوآوران فناوری</a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">خانه</a></li>
+                <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                <li><a href="services.html" class="nav-link active">خدمات</a></li>
+                <li><a href="products.html" class="nav-link">محصولات</a></li>
+                <li><a href="contact.html" class="nav-link">تماس با ما</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+<!-- صفحه خدمات -->
+<main class="main-content">
+    <!-- هیرو خدمات -->
+    <section class="hero services-hero">
+        <div class="hero-content">
+            <h1>خدمات تخصصی ما</h1>
+            <p>راه‌حل‌های جامع فناوری برای کسب‌وکارهای مدرن</p>
+        </div>
+    </section>
+
+    <!-- فیلتر خدمات -->
+    <section class="section">
+        <div class="services-filter">
+            <h2 class="section-title">خدمات ما</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">همه خدمات</button>
+                <button class="filter-btn" data-filter="web">توسعه وب</button>
+                <button class="filter-btn" data-filter="mobile">موبایل</button>
+                <button class="filter-btn" data-filter="design">طراحی</button>
+                <button class="filter-btn" data-filter="marketing">مارکتینگ</button>
+            </div>
+        </div>
+
+        <!-- لیست خدمات -->
+        <div class="services-container">
+            <!-- توسعه وب -->
+            <div class="service-category" id="web">
+                <h3 class="category-title">🖥️ توسعه وب سایت</h3>
+                <div class="services-grid">
+                    <div class="service-detail-card scroll-fade">
+                        <div class="service-header">
+                            <h4>وب سایت شرکتی</h4>
+                            <span class="service-price">از ۵ میلیون تومان</span>
+                        </div>
+                        <p>طراحی و توسعه وب سایت‌های شرکتی حرفه‌ای با امکانات کامل</p>
+                        <ul class="service-features">
+                            <li>طراحی ریسپانسیو</li>
+                            <li>سیستم مدیریت محتوا</li>
+                            <li>بهینه‌سازی SEO</li>
+                            <li>پنل مدیریت پیشرفته</li>
+                        </ul>
+                        <button class="btn service-btn" onclick="openModal('web-corporate')">مشاهده جزئیات</button>
+                    </div>
+
+                    <div class="service-detail-card scroll-fade">
+                        <div class="service-header">
+                            <h4>فروشگاه اینترنتی</h4>
+                            <span class="service-price">از ۱۵ میلیون تومان</span>
+                        </div>
+                        <p>راه‌اندازی فروشگاه آنلاین با امکانات کامل تجارت الکترونیک</p>
+                        <ul class="service-features">
+                            <li>درگاه پرداخت متنوع</li>
+                            <li>سیستم مدیریت موجودی</li>
+                            <li>پنل کاربری پیشرفته</li>
+                            <li>گزارش‌گیری حرفه‌ای</li>
+                        </ul>
+                        <button class="btn service-btn" onclick="openModal('web-ecommerce')">مشاهده جزئیات</button>
+                    </div>
+                </div>
+            </div>
+<!-- توسعه موبایل -->
+<div class="service-category" id="mobile">
+    <h3 class="category-title">📱 اپلیکیشن موبایل</h3>
+    <div class="services-grid">
+        <div class="service-detail-card scroll-fade">
+            <div class="service-header">
+                <h4>اپلیکیشن اندروید</h4>
+                <span class="service-price">از ۲۰ میلیون تومان</span>
+            </div>
+            <p>توسعه اپلیکیشن‌های native اندروید با بهترین عملکرد</p>
+            <ul class="service-features">
+                <li>توسعه با Kotlin/Java</li>
+                <li>طراحی Material Design</li>
+                <li>بهینه‌سازی مصرف باتری</li>
+                <li>انتشار در بازار</li>
+            </ul>
+            <button class="btn service-btn" onclick="openModal('mobile-android')">مشاهده جزئیات</button>
+        </div>
+
+        <div class="service-detail-card scroll-fade">
+            <div class="service-header">
+                <h4>اپلیکیشن iOS</h4>
+                <span class="service-price">از ۲۵ میلیون تومان</span>
+            </div>
+            <p>توسعه اپلیکیشن‌های iOS با استانداردهای اپل</p>
+            <ul class="service-features">
+                <li>توسعه با Swift</li>
+                <li>طراحی iOS Human Interface</li>
+                <li>تست روی دستگاه‌های مختلف</li>
+                <li>انتشار در App Store</li>
+            </ul>
+            <button class="btn service-btn" onclick="openModal('mobile-ios')">مشاهده جزئیات</button>
+        </div>
+
+        <div class="service-detail-card scroll-fade">
+            <div class="service-header">
+                <h4>اپلیکیشن هیبرید</h4>
+                <span class="service-price">از ۱۵ میلیون تومان</span>
+            </div>
+            <p>توسعه اپلیکیشن‌های cross-platform مقرون‌به‌صرفه</p>
+            <ul class="service-features">
+                <li>توسعه با React Native/Flutter</li>
+                <li>یک بار توسعه، دو پلتفرم</li>
+                <li>کاهش هزینه توسعه</li>
+                <li>پشتیبانی همزمان</li>
+            </ul>
+            <button class="btn service-btn" onclick="openModal('mobile-hybrid')">مشاهده جزئیات</button>
+        </div>
+    </div>
+</div>
+        <!-- طراحی -->
+        <div class="service-category" id="design">
+            <h3 class="category-title">🎨 طراحی و UI/UX</h3>
+            <div class="services-grid">
+                <div class="service-detail-card scroll-fade">
+                    <div class="service-header">
+                        <h4>طراحی UI/UX</h4>
+                        <span class="service-price">از ۳ میلیون تومان</span>
+                    </div>
+                    <p>طراحی تجربه کاربری و رابط کاربری حرفه‌ای</p>
+                    <ul class="service-features">
+                        <li>تحلیل کاربران</li>
+                        <li>طراحی وایرفریم</li>
+                        <li>طراحی پروتوتایپ</li>
+                        <li>تست کاربری</li>
+                    </ul>
+                    <button class="btn service-btn" onclick="openModal('design-uiux')">مشاهده جزئیات</button>
+                </div>
+
+                <div class="service-detail-card scroll-fade">
+                    <div class="service-header">
+                        <h4>برندینگ و هویت بصری</h4>
+                        <span class="service-price">از ۵ میلیون تومان</span>
+                    </div>
+                    <p>طراحی هویت بصری کامل برای برند شما</p>
+                    <ul class="service-features">
+                        <li>طراحی لوگو</li>
+                        <li>رنگ‌بندی و تایپوگرافی</li>
+                        <li>کتابچه راهنمای برند</li>
+                        <li>طراحی کارت ویزیت</li>
+                    </ul>
+                    <button class="btn service-btn" onclick="openModal('design-branding')">مشاهده جزئیات</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- مارکتینگ -->
+        <div class="service-category" id="marketing">
+            <h3 class="category-title">📈 دیجیتال مارکتینگ</h3>
+            <div class="services-grid">
+                <div class="service-detail-card scroll-fade">
+                    <div class="service-header">
+                        <h4>سئو و بهینه‌سازی</h4>
+                        <span class="service-price">ماهیانه از ۲ میلیون تومان</span>
+                    </div>
+                    <p>بهینه‌سازی سایت برای موتورهای جستجو</p>
+                    <ul class="service-features">
+                        <li>تحلیل کلمات کلیدی</li>
+                        <li>بهینه‌سازی On-Page</li>
+                        <li>لینک‌سازی حرفه‌ای</li>
+                        <li>گزارش‌گیری پیشرفته</li>
+                    </ul>
+                    <button class="btn service-btn" onclick="openModal('marketing-seo')">مشاهده جزئیات</button>
+                </div>
+
+                <div class="service-detail-card scroll-fade">
+                    <div class="service-header">
+                        <h4>تبلیغات اینترنتی</h4>
+                        <span class="service-price">ماهیانه از ۳ میلیون تومان</span>
+                    </div>
+                    <p>مدیریت کمپین‌های تبلیغاتی در فضای دیجیتال</p>
+                    <ul class="service-features">
+                        <li>تبلیغات گوگل Ads</li>
+                        <li>تبلیغات در شبکه‌های اجتماعی</li>
+                        <li>تبلیغات بنری</li>
+                        <li>آنالیز و گزارش عملکرد</li>
+                    </ul>
+                    <button class="btn service-btn" onclick="openModal('marketing-ads')">مشاهده جزئیات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- فرآیند کاری -->
+    <section class="section process-section">
+        <h2 class="section-title">فرآیند کاری ما</h2>
+        
+        <div class="process-steps">
+            <div class="process-step scroll-fade">
+                <div class="step-number">۱</div>
+                <h3>مشاوره و تحلیل</h3>
+                <p>بررسی نیازهای شما و ارائه پیشنهاد تخصصی</p>
+            </div>
+            
+            <div class="process-step scroll-fade">
+                <div class="step-number">۲</div>
+                <h3>طراحی و برنامه‌ریزی</h3>
+                <p>تهیه طرح اولیه و برنامه زمان‌بندی پروژه</p>
+            </div>
+            
+            <div class="process-step scroll-fade">
+                <div class="step-number">۳</div>
+                <h3>توسعه و پیاده‌سازی</h3>
+                <p>کدنویسی و پیاده‌سازی با آخرین تکنولوژی‌ها</p>
+            </div>
+            
+            <div class="process-step scroll-fade">
+                <div class="step-number">۴</div>
+                <h3>تست و کنترل کیفیت</h3>
+                <p>تست جامع و اطمینان از کیفیت محصول نهایی</p>
+            </div>
+            
+            <div class="process-step scroll-fade">
+                <div class="step-number">۵</div>
+                <h3>تحویل و پشتیبانی</h3>
+                <p>تحویل پروژه و ارائه پشتیبانی بلندمدت</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- فرم درخواست خدمات -->
+    <section class="section request-section">
+        <div class="request-form-container">
+            <h2 class="section-title">درخواست خدمات</h2>
+            <form id="serviceRequestForm" class="service-request-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="requestName" class="form-label">نام و نام خانوادگی *</label>
+                        <input type="text" id="requestName" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="requestCompany" class="form-label">نام شرکت</label>
+                        <input type="text" id="requestCompany" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="requestEmail" class="form-label">ایمیل *</label>
+                        <input type="email" id="requestEmail" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="requestPhone" class="form-label">تلفن تماس *</label>
+                        <input type="tel" id="requestPhone" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="requestService" class="form-label">نوع خدمات مورد نیاز *</label>
+                    <select id="requestService" class="form-control" required>
+                        <option value="">انتخاب کنید</option>
+                        <option value="web-corporate">وب سایت شرکتی</option>
+                        <option value="web-ecommerce">فروشگاه اینترنتی</option>
+                        <option value="mobile-android">اپلیکیشن اندروید</option>
+                        <option value="mobile-ios">اپلیکیشن iOS</option>
+                        <option value="mobile-hybrid">اپلیکیشن هیبرید</option>
+                        <option value="design-uiux">طراحی UI/UX</option>
+                        <option value="design-branding">برندینگ</option>
+                        <option value="marketing-seo">سئو</option>
+                        <option value="marketing-ads">تبلیغات</option>
+                        <option value="other">سایر</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="requestBudget" class="form-label">بودجه پیش‌بینی شده</label>
+                    <select id="requestBudget" class="form-control">
+                        <option value="">انتخاب کنید</option>
+                        <option value="1-5">۱-۵ میلیون تومان</option>
+                        <option value="5-10">۵-۱۰ میلیون تومان</option>
+                        <option value="10-20">۱۰-۲۰ میلیون تومان</option>
+                        <option value="20-50">۲۰-۵۰ میلیون تومان</option>
+                        <option value="50+">بالای ۵۰ میلیون تومان</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="requestDescription" class="form-label">توضیحات پروژه *</label>
+                    <textarea id="requestDescription" class="form-control" required placeholder="در مورد پروژه خود توضیح دهید..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-large">ارسال درخواست</button>
+            </form>
+        </div>
+    </section>
+</main>
+<!-- مودال جزئیات خدمات -->
+<div id="serviceModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div id="modalContent">
+            <!-- محتوای مودال توسط JavaScript پر می‌شود -->
+        </div>
+    </div>
+</div>
+
+<!-- فوتور -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>درباره ما</h3>
+            <p>شرکت نوآوران فناوری با هدف ارائه راه‌حل‌های نوآورانه در حوزه فناوری اطلاعات تأسیس شده است.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+                <a href="#" class="social-link">🐦</a>
+                <a href="#" class="social-link">💼</a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>لینک‌های سریع</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="services.html">خدمات</a></li>
+                <li><a href="products.html">محصولات</a></li>
+                <li><a href="contact.html">تماس با ما</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>تماس با ما</h3>
+            <div class="contact-info">
+                <p>📞 021-12345678</p>
+                <p>📧 info@company.com</p>
+                <p>📍 تهران، خیابان ولیعصر</p>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>خبرنامه</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="ایمیل خود را وارد کنید" class="form-control" required>
+                <button type="submit" class="btn">عضویت</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2024 شرکت نوآوران فناوری. تمام حقوق محفوظ است.</p>
+    </div>
+</footer>
+
+<!-- دکمه بازگشت به بالا -->
+<a href="#" class="back-to-top" id="backToTop">↑</a>
+<!-- JavaScript این صفحه -->
+<script>
+    // لودر
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader');
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 1000);
+    });
+
+    // منوی همبرگری
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // اسکرول نرم
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // دکمه بازگشت به بالا
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+<script>
+    // انیمیشن اسکرول
+    class ScrollAnimations {
+        constructor() {
+            this.elements = document.querySelectorAll('.scroll-fade');
+            this.init();
+        }
+        
+        init() {
+            this.checkScroll();
+            window.addEventListener('scroll', () => this.checkScroll());
+        }
+        
+        checkScroll() {
+            const triggerBottom = window.innerHeight * 0.8;
+            
+            this.elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerBottom) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+    }
+
+    // سیستم فیلتر خدمات
+    class ServicesFilter {
+        constructor() {
+            this.filterButtons = document.querySelectorAll('.filter-btn');
+            this.serviceCategories = document.querySelectorAll('.service-category');
+            this.init();
+        }
+        
+        init() {
+            this.filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => this.filterServices(btn));
+            });
+        }
+        
+        filterServices(clickedBtn) {
+            // حذف کلاس active از همه دکمه‌ها
+            this.filterButtons.forEach(btn => btn.classList.remove('active'));
+            // اضافه کردن کلاس active به دکمه کلیک شده
+            clickedBtn.classList.add('active');
+            
+            const filter = clickedBtn.getAttribute('data-filter');
+            
+            this.serviceCategories.forEach(category => {
+                if (filter === 'all' || category.id === filter) {
+                    category.style.display = 'block';
+                    setTimeout(() => {
+                        category.style.opacity = '1';
+                        category.style.transform = 'translateY(0)';
+                    }, 100);
+                } else {
+                    category.style.opacity = '0';
+                    category.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        category.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+    }
+
+    // راه‌اندازی انیمیشن‌ها و فیلتر
+    document.addEventListener('DOMContentLoaded', function() {
+        new ScrollAnimations();
+        new ServicesFilter();
+    });
+</script>
+<script>
+    // سیستم مودال خدمات
+    const serviceDetails = {
+        'web-corporate': {
+            title: 'وب سایت شرکتی',
+            description: 'طراحی و توسعه وب سایت‌های شرکتی حرفه‌ای با امکانات کامل',
+            features: [
+                'طراحی کاملاً ریسپانسیو',
+                'سیستم مدیریت محتوا (CMS)',
+                'بهینه‌سازی برای موتورهای جستجو (SEO)',
+                'پنل مدیریت پیشرفته',
+                'فرم‌های تماس هوشمند',
+                'گالری تصاویر و ویدیو',
+                'وب سرویس REST API',
+                'پشتیبانی ۶ ماهه رایگان'
+            ],
+            timeline: '۱۵-۳۰ روز کاری',
+            price: 'از ۵,۰۰۰,۰۰۰ تومان'
+        },
+        'web-ecommerce': {
+            title: 'فروشگاه اینترنتی',
+            description: 'راه‌اندازی فروشگاه آنلاین با امکانات کامل تجارت الکترونیک',
+            features: [
+                'درگاه پرداخت بانکی متعدد',
+                'سیستم مدیریت موجودی و انبار',
+                'پنل کاربری پیشرفته',
+                'سیستم نظرات و امتیازدهی',
+                'گزارش‌گیری حرفه‌ای',
+                'سیستم کوپن و تخفیف',
+                'پنل مدیریت سفارشات',
+                'پشتیبانی ۱۲ ماهه'
+            ],
+            timeline: '۳۰-۶۰ روز کاری',
+            price: 'از ۱۵,۰۰۰,۰۰۰ تومان'
+        },
+        'mobile-android': {
+            title: 'اپلیکیشن اندروید',
+            description: 'توسعه اپلیکیشن‌های native اندروید با بهترین عملکرد',
+            features: [
+                'توسعه با Kotlin و Java',
+                'طراحی Material Design',
+                'بهینه‌سازی مصرف باتری',
+                'پشتیبانی از نسخه‌های مختلف اندروید',
+                'انتشار در بازار و گوگل پلی',
+                'آنالیتیکس و گزارش‌گیری',
+                'پشتیبانی فنی ۶ ماهه',
+                'آپدیت دوره‌ای'
+            ],
+            timeline: '۴۵-۷۵ روز کاری',
+            price: 'از ۲۰,۰۰۰,۰۰۰ تومان'
+        }
+        // ... سایر سرویس‌ها
+    };
+
+    function openModal(serviceId) {
+        const service = serviceDetails[serviceId];
+        if (!service) return;
+        
+        const modalContent = document.getElementById('modalContent');
+        modalContent.innerHTML = `
+            <h2>${service.title}</h2>
+            <p class="modal-description">${service.description}</p>
+            
+            <div class="modal-details">
+                <div class="detail-item">
+                    <strong>💰 قیمت:</strong>
+                    <span>${service.price}</span>
+                </div>
+                <div class="detail-item">
+                    <strong>⏱️ زمان تحویل:</strong>
+                    <span>${service.timeline}</span>
+                </div>
+            </div>
+            
+            <h3>امکانات و قابلیت‌ها:</h3>
+            <ul class="modal-features">
+                ${service.features.map(feature => `<li>${feature}</li>`).join('')}
+            </ul>
+            
+            <div class="modal-actions">
+                <button class="btn" onclick="requestService('${serviceId}')">درخواست این خدمت</button>
+                <button class="btn btn-secondary" onclick="closeModal()">بستن</button>
+            </div>
+        `;
+        
+        document.getElementById('serviceModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('serviceModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    function requestService(serviceId) {
+        const service = serviceDetails[serviceId];
+        document.getElementById('requestService').value = serviceId;
+        closeModal();
+        
+        // اسکرول به فرم درخواست
+        document.getElementById('serviceRequestForm').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+</script>
+    <script>
+        // مدیریت فرم درخواست خدمات
+        class ServiceRequestForm {
+            constructor() {
+                this.form = document.getElementById('serviceRequestForm');
+                this.init();
+            }
+            
+            init() {
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+                this.setupValidation();
+            }
+            
+            setupValidation() {
+                const inputs = this.form.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', () => this.validateField(input));
+                    input.addEventListener('input', () => this.clearError(input));
+                });
+            }
+            
+            validateField(field) {
+                const value = field.value.trim();
+                
+                if (field.hasAttribute('required') && !value) {
+                    this.showError(field, 'این فیلد الزامی است');
+                    return false;
+                }
+                
+                if (field.type === 'email' && value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        this.showError(field, 'ایمیل معتبر نیست');
+                        return false;
+                    }
+                }
+                
+                if (field.type === 'tel' && value) {
+                    const phoneRegex = /^09[0-9]{9}$/;
+                    if (!phoneRegex.test(value)) {
+                        this.showError(field, 'شماره تلفن معتبر نیست');
+                        return false;
+                    }
+                }
+                
+                this.clearError(field);
+                return true;
+            }
+            
+            showError(field, message) {
+                this.clearError(field);
+                field.classList.add('error');
+                
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message';
+                errorDiv.textContent = message;
+                field.parentNode.appendChild(errorDiv);
+            }
+            
+            clearError(field) {
+                field.classList.remove('error');
+                const errorMessage = field.parentNode.querySelector('.error-message');
+                if (errorMessage) {
+                    errorMessage.remove();
+                }
+            }
+            
+            async handleSubmit(e) {
+                e.preventDefault();
+                
+                // اعتبارسنجی تمام فیلدها
+                const fields = this.form.querySelectorAll('input, select, textarea');
+                let isValid = true;
+                
+                fields.forEach(field => {
+                    if (!this.validateField(field)) {
+                        isValid = false;
+                    }
+                });
+                
+                if (!isValid) {
+                    alert('لطفا تمام فیلدهای الزامی را به درستی پر کنید');
+                    return;
+                }
+                
+                // جمع‌آوری داده‌ها
+                const formData = {
+                    name: document.getElementById('requestName').value,
+                    company: document.getElementById('requestCompany').value,
+                    email: document.getElementById('requestEmail').value,
+                    phone: document.getElementById('requestPhone').value,
+                    service: document.getElementById('requestService').value,
+                    budget: document.getElementById('requestBudget').value,
+                    description: document.getElementById('requestDescription').value,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // شبیه‌سازی ارسال
+                try {
+                    await this.submitRequest(formData);
+                    alert('درخواست شما با موفقیت ثبت شد. همکاران ما به زودی با شما تماس خواهند گرفت.');
+                    this.form.reset();
+                } catch (error) {
+                    alert('خطا در ثبت درخواست! لطفا دوباره تلاش کنید.');
+                }
+            }
+            
+            async submitRequest(data) {
+                // شبیه‌سازی تاخیر شبکه
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                console.log('Service request submitted:', data);
+                return true;
+            }
+        }
+
+        // راه‌اندازی نهایی
+        document.addEventListener('DOMContentLoaded', function() {
+            new ServiceRequestForm();
+            
+            // بستن مودال با کلیک خارج
+            document.getElementById('serviceModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+            
+            // بستن مودال با کلید ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+
+            console.log('Services page loaded successfully!');
+        });
+
+        // Utility functions
+        const serviceUtils = {
+            formatPrice: (price) => {
+                return new Intl.NumberFormat('fa-IR').format(price) + ' تومان';
+            },
+            
+            estimateTimeline: (serviceType) => {
+                const timelines = {
+                    'web-corporate': '۱۵-۳۰ روز',
+                    'web-ecommerce': '۳۰-۶۰ روز',
+                    'mobile-android': '۴۵-۷۵ روز',
+                    'mobile-ios': '۴۵-۷۵ روز',
+                    'mobile-hybrid': '۳۰-۶۰ روز'
+                };
+                return timelines[serviceType] || 'مشاوره نیاز است';
+            },
+            
+            scrollToCategory: (categoryId) => {
+                const category = document.getElementById(categoryId);
+                if (category) {
+                    category.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        };
+    </script>
+</body>
+</html>
